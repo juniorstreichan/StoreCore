@@ -35,7 +35,7 @@ namespace Store.Service
 
         public IEnumerable<Product> GetProdctsByDescription(string description)
         {
-            return repository.Find(p => p.Description.Contains(description));
+            return repository.Find(p => p.Description.ToUpper().Contains(description.ToUpper()));
         }
 
         public void Remove(int id)
