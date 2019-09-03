@@ -30,17 +30,17 @@ namespace Store.Service
 
         public Product GetById(int id)
         {
-            throw new System.NotImplementedException();
+            return repository.ById(id);
         }
 
         public IEnumerable<Product> GetProdctsByDescription(string description)
         {
-            throw new System.NotImplementedException();
+            return repository.Find(p => p.Description.Contains(description));
         }
 
         public void Remove(int id)
         {
-            throw new System.NotImplementedException();
+            repository.Delete(id);
         }
     }
 }
