@@ -5,7 +5,7 @@ namespace Store.Infra.Context
 {
     public class StoreContext : DbContext
     {
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Product> Product { get; set; }
         public StoreContext(DbContextOptions<StoreContext> options) : base(options) { }
     }
 }
