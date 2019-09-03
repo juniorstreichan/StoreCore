@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Store.Domain.Interfaces.Services;
@@ -18,39 +17,44 @@ namespace Store.Web.API.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<Product>> GetAll(){
+        public ActionResult<IEnumerable<Product>> GetAll()
+        {
             return Ok(service.GetAll());
         }
         
         [HttpGet("{id}")]
-        public ActionResult<Product> GetById(int id){
+        public ActionResult<Product> GetById(int id)
+        {
             return Ok(service.GetById(id));
         }
         
         [HttpGet("q")]
-        public ActionResult<Product> GetByDescription([FromQuery] string description){
+        public ActionResult<Product> GetByDescription([FromQuery] string description = "")
+        {
             return Ok(service.GetProdctsByDescription(description));
         }
 
         [HttpPost]
-        public ActionResult<Product> Post([FromBody] Product product){
+        public ActionResult<Product> Post([FromBody] Product product)
+        {
             var newProduct = service.Add(product);
             return Created("/"+newProduct.Id.ToString(),newProduct);
         }
 
         [HttpPut]
-        public ActionResult<Product> Pup([FromBody] Product product){
+        public ActionResult<Product> Pup([FromBody] Product product)
+        {
             var newProduct = service.Change(product);
             return Ok(newProduct);
         }
 
 
         [HttpDelete("{id}")]
-        public ActionResult<object> Delete(int id){
+        public ActionResult<object> Delete(int id)
+        {
             service.Remove(id);
             return Ok();
         }
-
 
     }
 }
