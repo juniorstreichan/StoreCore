@@ -16,7 +16,7 @@ namespace Store.Infra.Repository
         public ProductRepository(StoreContext ctx)
         {
             _context = ctx;
-            _db = ctx.Products;
+            _db = ctx.Product;
         }
         public Product ById(int id)
         {
