@@ -1,0 +1,10 @@
+insert into public."Provider" ("Id", "SocialName", "FantasyName") values (1, 'Mymm', 'Pannier');
+insert into public."Provider" ("Id", "SocialName", "FantasyName") values (2, 'Thoughtbridge', 'Holdlamis');
+insert into public."Provider" ("Id", "SocialName", "FantasyName") values (3, 'Twitterbridge', 'Cardguard');
+insert into public."Provider" ("Id", "SocialName", "FantasyName") values (4, 'Youbridge', 'Sub-Ex');
+insert into public."Provider" ("Id", "SocialName", "FantasyName") values (5, 'Topicshots', 'Zaam-Dox');
+insert into public."Provider" ("Id", "SocialName", "FantasyName") values (6, 'Agivu', 'Stringtough');
+insert into public."Provider" ("Id", "SocialName", "FantasyName") values (7, 'Roombo', 'Zamit');
+insert into public."Provider" ("Id", "SocialName", "FantasyName") values (8, 'Fadeo', 'Asoka');
+insert into public."Provider" ("Id", "SocialName", "FantasyName") values (9, 'Oba', 'Opela');
+insert into public."Provider" ("Id", "SocialName", "FantasyName") values (10, 'Twiyo', 'Voltsillam');
