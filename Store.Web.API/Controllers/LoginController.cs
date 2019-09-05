@@ -36,7 +36,7 @@ namespace Store.Web.API.Controllers {
           claims: claims,
           issuer: "StoreCore",
           audience: "StoreCore",
-          expires : DateTime.Now.AddMinutes (30),
+          expires : DateTime.Now.AddDays (1),
           signingCredentials : creds
         );
         return Ok (new { token = new JwtSecurityTokenHandler ().WriteToken (token) });

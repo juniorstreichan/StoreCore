@@ -20,7 +20,7 @@ namespace Store.Infra.Repository
         }
         public Product ById(int id)
         {
-            return _db.FirstOrDefault(
+            return _db.Include("Tags").Include("Provider").FirstOrDefault(
                 p => p.Id == id
             );
         }
@@ -34,12 +34,12 @@ namespace Store.Infra.Repository
 
         public IQueryable<Product> Find(Expression<Func<Product, bool>> expression)
         {
-            return _db.Where(expression);
+            return _db.Include("Tags").Include("Provider").Where(expression);
         }
 
         public IEnumerable<Product> FindAll()
         {
-            return _db.ToList();
+            return _db.Include("Tags").Include("Provider").ToList();
         }
 
         public Product Insert(Product p)
